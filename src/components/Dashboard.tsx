@@ -173,7 +173,7 @@ const Dashboard: React.FC<DashboardProps> = ({ userRole, onLogout }) => {
     setActiveSection(section);
     if (section === 'Hotels') {
       setShowHotelDashboard(true);
-    } else {
+    } else if (section === 'Cruises') {
       setShowHotelDashboard(false);
     }
   };

@@ -99,7 +99,7 @@ const NotificationSystem: React.FC<NotificationSystemProps> = ({ userId }) => {
 
       {/* Notification Dropdown */}
       {isOpen && (
-        <div className="absolute right-0 top-12 w-80 bg-white rounded-lg shadow-2xl border border-gray-200 z-50 max-h-96 overflow-hidden">
+        <div className="absolute right-0 top-12 w-80 bg-white rounded-lg shadow-2xl border border-gray-200 z-[9999] max-h-96 overflow-hidden">
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-gray-200 bg-gray-50">
             <h3 className="font-semibold text-gray-800">Notifications</h3>

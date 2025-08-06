@@ -16,19 +16,23 @@ const TopNavbar: React.FC<TopNavbarProps> = ({ activeSection, onSectionChange })
   const navItems: NavItem[] = [
     {
       icon: <Building size={24} />,
-      label: 'Hotels'
+      label: 'Hotels',
+      active: activeSection === 'Hotels'
     },
     {
       icon: <Plane size={24} />,
-      label: 'Flights'
+      label: 'Flights',
+      active: activeSection === 'Flights'
     },
     {
       icon: <Ship size={24} />,
-      label: 'Cruises'
+      label: 'Cruises',
+      active: activeSection === 'Cruises'
     },
     {
       icon: <Train size={24} />,
-      label: 'Trains'
+      label: 'Trains',
+      active: activeSection === 'Trains'
     }
   ];
 
@@ -40,6 +44,7 @@ const TopNavbar: React.FC<TopNavbarProps> = ({ activeSection, onSectionChange })
     }
     onSectionChange(label);
   };
+  
   return (
     <div className="flex-1">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -49,20 +54,20 @@ const TopNavbar: React.FC<TopNavbarProps> = ({ activeSection, onSectionChange })
               onClick={() => handleSectionClick(item.label)}
               className={`
                 flex flex-col items-center gap-2 p-4 rounded-lg transition-all duration-200
-                ${activeSection === item.label 
+                ${item.active
                   ? 'bg-blue-500 text-white shadow-lg transform scale-105' 
                   : 'bg-white/30 text-gray-700 hover:bg-white/50 hover:shadow-md hover:scale-102'
                 }
               `}
             >
               <div className={`
-                ${activeSection === item.label ? 'text-white' : 'text-blue-600'}
+                ${item.active ? 'text-white' : 'text-blue-600'}
               `}>
                 {item.icon}
               </div>
               <span className={`
                 text-sm font-medium
-                ${activeSection === item.label ? 'text-white' : 'text-gray-700'}
+                ${item.active ? 'text-white' : 'text-gray-700'}
               `}>
                 {item.label}
               </span>

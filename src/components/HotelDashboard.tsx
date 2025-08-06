@@ -125,7 +125,7 @@ const HotelDashboard: React.FC<HotelDashboardProps> = ({ userRole, onLogout, onB
 
   // Handle section navigation
   const handleSectionChange = (section: string) => {
-    if (section === 'Dashboard') {
+    if (section === 'Cruises') {
       onBackToCruise();
     } else {
       setActiveSection(section);
