@@ -191,14 +191,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isCollapsed, onToggle, userRole, onLo
           </button>
           
           <button
-            onClick={handleContactSupport}
-            className={`w-full flex items-center ${isCollapsed ? 'justify-center' : 'gap-2'} px-3 py-2 text-teal-600 hover:bg-teal-50 rounded-lg transition-colors`}
-          >
-            <MessageCircle size={18} />
-            {!isCollapsed && <span>Contact Support</span>}
-          </button>
-          
-          <button
             onClick={onLogout}
             className={`w-full flex items-center ${isCollapsed ? 'justify-center' : 'gap-2'} px-3 py-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors`}
           >
