@@ -170,11 +170,14 @@ const Dashboard: React.FC<DashboardProps> = ({ userRole, onLogout }) => {
 
   // Handle section navigation
   const handleSectionChange = (section: string) => {
-    setActiveSection(section);
     if (section === 'Hotels') {
       setShowHotelDashboard(true);
+      setActiveSection('Hotels');
     } else if (section === 'Cruises') {
       setShowHotelDashboard(false);
+      setActiveSection('Cruises');
+    } else {
+      setActiveSection(section);
     }
   };
 

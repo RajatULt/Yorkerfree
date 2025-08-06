@@ -42,6 +42,7 @@ const TopNavbar: React.FC<TopNavbarProps> = ({ activeSection, onSectionChange })
       alert(`${label} booking feature is coming soon! Currently available: Cruises and Hotels.`);
       return;
     }
+    // Always call onSectionChange for valid sections
     onSectionChange(label);
   };
   
